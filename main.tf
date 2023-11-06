@@ -1,4 +1,5 @@
 provider "vault" {
+ skip_tls_verify = true
 }
 
 data "vault_kv_secret_v2" "my-secret" {
