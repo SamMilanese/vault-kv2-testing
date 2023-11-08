@@ -8,5 +8,6 @@ data "vault_kv_secret_v2" "my-secret" {
 }
 
 output secret {
+sensitive = true
 value = "${data.vault_kv_secret_v2.my-secret.data["foo"]}"
 }
